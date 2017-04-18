@@ -12,13 +12,7 @@
             <xs:element name="password" type="xs:string"/>
             <xs:element name="firstName" type="xs:string"/>
             <xs:element name="lastName" type="xs:string"/>
-            <xs:element name="lectureList" >
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="lecture" type="Lecture" maxOccurs="unbounded"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
+            <xs:element name="lectureList" type="Lecture" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
 </xs:schema>

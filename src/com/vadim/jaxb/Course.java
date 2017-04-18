@@ -15,12 +15,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for Role complex type.
+ * <p>Java class for Course complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="Role">
+ * &lt;complexType name="Course">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -35,11 +35,11 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Role", propOrder = {
+@XmlType(name = "Course", propOrder = {
     "id",
     "name"
 })
-public class Role {
+public class Course {
 
     protected int id;
     @XmlElement(required = true)

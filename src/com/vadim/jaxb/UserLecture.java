@@ -15,17 +15,17 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for Role complex type.
+ * <p>Java class for UserLecture complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="Role">
+ * &lt;complexType name="UserLecture">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="user" type="{}User"/>
+ *         &lt;element name="lecture" type="{}Lecture"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -35,54 +35,63 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Role", propOrder = {
-    "id",
-    "name"
+@XmlType(name = "UserLecture", propOrder = {
+    "user",
+    "lecture"
 })
-public class Role {
+public class UserLecture {
 
-    protected int id;
     @XmlElement(required = true)
-    protected String name;
+    protected User user;
+    @XmlElement(required = true)
+    protected Lecture lecture;
 
     /**
-     * Gets the value of the id property.
-     * 
-     */
-    public int getId() {
-        return id;
-    }
-
-    /**
-     * Sets the value of the id property.
-     * 
-     */
-    public void setId(int value) {
-        this.id = value;
-    }
-
-    /**
-     * Gets the value of the name property.
+     * Gets the value of the user property.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link User }
      *     
      */
-    public String getName() {
-        return name;
+    public User getUser() {
+        return user;
     }
 
     /**
-     * Sets the value of the name property.
+     * Sets the value of the user property.
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link User }
      *     
      */
-    public void setName(String value) {
-        this.name = value;
+    public void setUser(User value) {
+        this.user = value;
+    }
+
+    /**
+     * Gets the value of the lecture property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Lecture }
+     *     
+     */
+    public Lecture getLecture() {
+        return lecture;
+    }
+
+    /**
+     * Sets the value of the lecture property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Lecture }
+     *     
+     */
+    public void setLecture(Lecture value) {
+        this.lecture = value;
     }
 
 }

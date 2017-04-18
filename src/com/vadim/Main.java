@@ -1,6 +1,6 @@
 package com.vadim;
 
-import com.vadim.jaxb.Data;
+import com.vadim.models.Data;
 
 public class Main {
 

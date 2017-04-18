@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified" attributeFormDefault="unqualified" vc:minVersion="1.1">
+    <xs:include schemaLocation="User.xsd"/>
+    <xs:include schemaLocation="Lecture.xsd"/>
+    <xs:element name="UserLecture" type = "UserLecture">
+    </xs:element>
+    <xs:complexType name="UserLecture">
+        <xs:sequence>
+            <xs:element name="user" type="User"/>
+            <xs:element name="lecture" type="Lecture"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
+

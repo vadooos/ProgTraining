@@ -18,6 +18,13 @@ public class DataBaseManager {
     private final String USER = "root";
     private final String PASSWORD = "1234";
 
+    private ResultSet rsRoles;
+    private ResultSet rsUser;
+    private ResultSet rsLectures;
+    private ResultSet rsUserLecture;
+    private ResultSet rsCouses;
+    private Connection connection = null;
+
     public ResultSet getRsRoles() {
         return rsRoles;
     }
@@ -34,12 +41,11 @@ public class DataBaseManager {
         return rsUserLecture;
     }
 
-    private ResultSet rsRoles;
-    private ResultSet rsUser;
-    private ResultSet rsLectures;
-    private ResultSet rsUserLecture;
+    public ResultSet getRsCouses() {
+        return rsCouses;
+    }
 
-    private Connection connection = null;
+
 
     public DataBaseManager() {
         connection = initConnection();
@@ -70,6 +76,7 @@ public class DataBaseManager {
             rsLectures = connection.createStatement().executeQuery("SELECT * FROM lecture");
             rsUser = connection.createStatement().executeQuery("SELECT * FROM user ");
             rsUserLecture = connection.createStatement().executeQuery("select * from user_lecture");
+            rsCouses = connection.createStatement().executeQuery("SELECT  * from course");
 
         } catch (SQLException e) {
             e.printStackTrace();
